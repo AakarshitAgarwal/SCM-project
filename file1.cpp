@@ -155,3 +155,47 @@ for(i=serial;answer=='y'||answer=='Y';i++)
 {
 PI[i].reg_no=i;
 temp=serial;
+cout<<"\n***ENTERING INFORMATION FOR PATIENT SERIAL NUMBER "<<i<<"***"<<""<<endl;
+cin.get(ch);
+cout<<"\nRegistration Number : "<<PI[i].reg_no<<"";
+cout<<"\nEnter the name of patient :"<<"";
+clreol();
+cin.getline(PI[i].name,50);
+cout<<"\nSex (1-Male 2-Female) :"<<"";
+clreol();
+cin>>PI[i].sex;
+while(PI[i].sex!=1&&PI[i].sex!=2)
+{
+cout<<"\nInvalid input for sex of patient!!!"<<"";
+cout<<"\nSex :"<<"";
+clreol();
+cin>>PI[i].sex;
+}
+cout<<"\n***ENTERING ADDRESS**"<<"";
+cout<<"\nHouse number :"<<" ";
+clreol();
+cin>>PI[i].AD1.house;
+while(PI[i].AD1.house<=0)
+{
+cout<<"\nInvalid input for house number ."<<"";
+cout<<"\nAgain enter the house number ."<<"";
+clreol();
+cin>>PI[i].AD1.house;
+}
+cin.get(ch);
+cout<<"\nStreet: "<<"";
+clreol();
+cin.getline(PI[i].AD1.street,30);
+cout<<"\nCity: "<<"";
+clreol();
+cin.getline(PI[i].AD1.city,30);
+cout<<"\nState: "<<"";
+clreol();
+cin.getline(PI[i].AD1.state,30);
+cout<<"\nCountry: "<<"";
+clreol();
+cin.getline(PI[i].AD1.country,30);
+DOB1.enter_date();
+//to calculate age
+cin.get(ch);
+cout<<"\nMartial status(1-Married,2-Not Married): "<<"";
