@@ -101,3 +101,57 @@ cout<<"4. Exit from the program ."<<""<<endl;
 //other function remain
 cout<<"Enter your task serial: "<<"";
 cin>>task;
+switch(task)
+{
+case 1:
+{
+A1.enter_patient_info();
+break;
+}
+case 2:
+{
+A1.show_patient_detail();
+break;
+}
+case 3:
+{
+A1.software_detail();
+break;
+}
+case 4:
+{
+clrscr();
+cout<<"\n Thank You for trying this program !!!"<<""<<endl;
+cout<<" This is the end of program...."<<""<<endl;
+cout<<"Press any key to exit....."<<""<<endl;
+getch();
+exit(0);
+break;
+}
+default:
+{
+clrscr();
+cout<<"\n Invalid task serial ."<<""<<endl;
+cout<<"Press any key to continue...."<<""<<endl;
+getch();
+clrscr();
+A1.tasks();
+}
+}
+}
+void all::enter_patient_info()
+{
+clrscr();
+answer='y';
+if(count==0)
+{
+serial=1;
+}
+else
+{
+i=serial;
+}
+for(i=serial;answer=='y'||answer=='Y';i++)
+{
+PI[i].reg_no=i;
+temp=serial;
