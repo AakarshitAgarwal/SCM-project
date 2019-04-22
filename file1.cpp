@@ -354,3 +354,50 @@ clreol();
 cin>>DOB11[temp].date;
 }
 }
+else
+{
+while(DOB11[temp].date<0||DOB11[temp].date>28)
+//for non-leap year
+{
+clreol();
+cout<<"\nInvalid date !"<<"";
+cout<<"\nAgain enter the date: "<<"";
+clreol();
+cin>>DOB11[temp].date;
+}
+}
+break;
+}
+default:
+{
+cin>>DOB11[temp].date;
+while(DOB11[temp].date<1||DOB11[temp].date>30)
+{
+clreol();
+cout<<"\nInvalid date !"<<"";
+cout<<"\nAgain enter the date: "<<"";
+clreol();
+cin>>DOB11[temp].date;
+}
+break;
+}
+} //end of switch
+clreol();
+}
+void date::enter_date()
+{
+cout<<"\n First of all I need the current date ..."<<"";
+cout<<"\nYear :";
+cin>>year;
+if(year<=0||year>10000)
+{
+do
+{
+cout<<"\nInvalid input for year !"<<"";
+cout<<"\nPlease enter the year correctly: "<<"";
+cin>>year;
+}
+while(year>0||year<10000);
+}
+cout<<"\nMonth: ";
+cin>>month;
