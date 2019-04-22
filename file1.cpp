@@ -251,3 +251,52 @@ case 8:
 {
 break;
 }
+default:
+{
+while(PI[i].bld_group!=1&&PI[i].bld_group!=2&&PI[i].bld_group!=3&&
+PI[i].bld_group!=4&&PI[i].bld_group!=5&&PI[i].bld_group!=6&&
+PI[i].bld_group!=7&&PI[i].bld_group!=8)
+{
+clreol();
+cout<<"\nInvalid input !"<<"";
+cout<<"\nBlood Group: "<<"";
+clreol();
+cin>>PI[i].bld_group;
+}
+break;
+}
+}
+cin.get(ch);
+cout<<"\nWant to enter information for another patient ? "<<"";
+clreol();
+cin>>answer;
+count++;
+serial++;
+}
+clrscr();
+A1.tasks();
+}
+void dob::enter_date()
+{
+clreol();
+cout<<"\nDate of birth -"<<"";
+clreol();
+cout<<"\nYear :";
+clreol();
+clreol();
+cin>>DOB11[temp].year;
+if(DOB11[temp].year<=0||DOB11[temp].year>10000)
+{
+do
+{
+clreol();
+cout<<"\nInvalid input for year !"<<"";
+cout<<"\nPlease enter the year correctly :"<<"";
+cin>>DOB11[temp].year;
+}
+while(DOB11[temp].year<0||DOB11[temp].year>10000);
+}
+clreol();
+cout<<"\nMonth: ";
+clreol();
+cin>>DOB11[temp].month;
