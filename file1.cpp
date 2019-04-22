@@ -251,3 +251,153 @@ case 8:
 {
 break;
 }
+default:
+{
+while(PI[i].bld_group!=1&&PI[i].bld_group!=2&&PI[i].bld_group!=3&&
+PI[i].bld_group!=4&&PI[i].bld_group!=5&&PI[i].bld_group!=6&&
+PI[i].bld_group!=7&&PI[i].bld_group!=8)
+{
+clreol();
+cout<<"\nInvalid input !"<<"";
+cout<<"\nBlood Group: "<<"";
+clreol();
+cin>>PI[i].bld_group;
+}
+break;
+}
+}
+cin.get(ch);
+cout<<"\nWant to enter information for another patient ? "<<"";
+clreol();
+cin>>answer;
+count++;
+serial++;
+}
+clrscr();
+A1.tasks();
+}
+void dob::enter_date()
+{
+clreol();
+cout<<"\nDate of birth -"<<"";
+clreol();
+cout<<"\nYear :";
+clreol();
+clreol();
+cin>>DOB11[temp].year;
+if(DOB11[temp].year<=0||DOB11[temp].year>10000)
+{
+do
+{
+clreol();
+cout<<"\nInvalid input for year !"<<"";
+cout<<"\nPlease enter the year correctly :"<<"";
+cin>>DOB11[temp].year;
+}
+while(DOB11[temp].year<0||DOB11[temp].year>10000);
+}
+clreol();
+cout<<"\nMonth: ";
+clreol();
+cin>>DOB11[temp].month;
+if(DOB11[temp].month<=0||DOB11[temp].month>12)
+{
+do
+{
+clreol();
+cout<<"\nInvalid input for month !"<<"";
+cout<<"\nAgain enter the month: "<<"";
+clreol();
+if(count!=0)
+{
+clreol();
+}
+cin>>DOB11[temp].month;
+}
+while(DOB11[temp].month<0||DOB11[temp].month>12);
+}
+cout<<"\nDate: ";
+clreol();
+switch(DOB11[temp].month)
+{
+case 1:
+case 3:
+case 5:
+case 7:
+case 8:
+case 10:
+case 12:
+{
+cin>>DOB11[temp].date;
+while(DOB11[temp].date<1||DOB11[temp].date>31)
+{
+clreol();
+cout<<"\nInvalid date !"<<"";
+cout<<"\nAgain enter the date: "<<"";
+clreol();
+cin>>DOB11[temp].date;
+}
+break;
+}
+case 2:
+{
+cin>>DOB11[temp].date;
+if(DOB11[temp].year%4==0)
+{
+while(DOB11[temp].date<0||DOB11[temp].date>29)
+//for leap year
+{
+clreol();
+cout<<"\nInvalid date !"<<"";
+cout<<"\nAgain enter the date: "<<"";
+clreol();
+cin>>DOB11[temp].date;
+}
+}
+else
+{
+while(DOB11[temp].date<0||DOB11[temp].date>28)
+//for non-leap year
+{
+clreol();
+cout<<"\nInvalid date !"<<"";
+cout<<"\nAgain enter the date: "<<"";
+clreol();
+cin>>DOB11[temp].date;
+}
+}
+break;
+}
+default:
+{
+cin>>DOB11[temp].date;
+while(DOB11[temp].date<1||DOB11[temp].date>30)
+{
+clreol();
+cout<<"\nInvalid date !"<<"";
+cout<<"\nAgain enter the date: "<<"";
+clreol();
+cin>>DOB11[temp].date;
+}
+break;
+}
+} //end of switch
+clreol();
+}
+void date::enter_date()
+{
+cout<<"\n First of all I need the current date ..."<<"";
+cout<<"\nYear :";
+cin>>year;
+if(year<=0||year>10000)
+{
+do
+{
+cout<<"\nInvalid input for year !"<<"";
+cout<<"\nPlease enter the year correctly: "<<"";
+cin>>year;
+}
+while(year>0||year<10000);
+}
+cout<<"\nMonth: ";
+cin>>month;
