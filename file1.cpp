@@ -401,3 +401,45 @@ while(year>0||year<10000);
 }
 cout<<"\nMonth: ";
 cin>>month;
+[200~}
+cout<<year<<" ";
+}
+void all::show_patient_detail()
+{
+	do
+	{
+		clrscr();
+		cout<<"\nEnter registration number :"<<"";
+		clreol();
+		cin>>regis;
+		cin.get(ch);
+		show_count++;
+		if(regis>0&&regis<serial)
+		{
+			clreol();
+			cout<<"\n***INFORMATION FOR PATIENT REGISTRATION NUMBER"<<regis<<"***";
+			clreol();
+			cout<<"\nName : "<<PI[regis].name<<"";
+			clreol();
+			cout<<"\nSex: ";
+			clreol();
+			if(PI[regis].sex==1)
+			{
+				cout<<"Male"<<"";
+				clreol();
+			}
+			if(PI[regis].sex==2)
+			{
+				cout<<"Female "<<"";
+				clreol();
+			}
+			cout<<"\nBlood Group : ";
+			clreol();
+			switch(PI[regis].bld_group)
+			{
+				case 1:
+					{
+						clreol();
+						cout<<"A+";
+						break;
+					}
