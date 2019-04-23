@@ -443,3 +443,57 @@ void all::show_patient_detail()
 						cout<<"A+";
 						break;
 					}
+					case 2:
+{
+clreol();
+cout<<"A-";
+break;
+}
+case 3:
+{
+clreol();
+cout<<"B+";
+break;
+}
+case 4:
+{
+clreol();
+cout<<"B-";
+break;
+}
+case 5:
+{
+clreol();
+cout<<"AB+";
+break;
+}
+case 6:
+{
+clreol();
+cout<<"AB-";
+break;
+}
+case 7:
+{
+clreol();
+cout<<"O+";
+break;
+}
+case 8:
+{
+clreol();
+cout<<"O-";
+break;
+}
+}
+clreol();
+cout<<"\nDate of birth : ";
+clreol();
+DOB1.show_date();
+cout<<"\nMarital Status : ";
+clreol();
+if(PI[i].martial_status==1)
+{
+cout<<"Married "<<"";
+clreol();
+}
