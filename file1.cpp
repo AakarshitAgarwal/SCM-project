@@ -843,3 +843,13 @@ cout<<DOB11[regis].year<<" ";
 void all::software_detail()
 {
 clrscr();
+cout<<"\n***SOFTWARE DETAILS***";
+cout<<"\nProgramming Language : C++ "<<"";
+cout<<"\nAim : Simulation of the software used in Hospital"<<"";
+cout<<"\nHope you like it..."<<"";
+cout<<"\nSend your comments to : 500067782@stu.upes.ac.in"<<"";
+cout<<"\nThank You for trying this program. "<<"";
+cout<<"\nPress any key to return to the main task menu......."<<" ";
+getch();
+A1.tasks();
+}
